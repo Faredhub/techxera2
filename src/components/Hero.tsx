@@ -7,11 +7,12 @@ const Hero = () => {
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
+          // src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
+          src="https://img.freepik.com/free-vector/futuristic-technological-wallpaper_79603-1093.jpg?t=st=1739728036~exp=1739731636~hmac=0bb8bc882fda2b58f9995d5c456697a79321dac0fa82daa00872930d99fadb5b&w=996"
           alt="Tech Background"
-          className="w-full h-full object-cover opacity-50"
+          className="w-full h-full object-cover object-right opacity-50"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-black/90"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/30"></div>
       </div>
       <div className="container mx-auto px-4 text-center relative z-10 mt-16">
         <motion.h1

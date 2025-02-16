@@ -7,40 +7,40 @@ import { useState } from "react";
 import { useToast } from "@/components/ui/use-toast";
 
 const Register = () => {
-  const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    college: "",
-    phone: "",
-  });
+  // const { toast } = useToast();
+  // const [formData, setFormData] = useState({
+  //   name: "",
+  //   email: "",
+  //   college: "",
+  //   phone: "",
+  // });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast({
-      title: "Registration Successful!",
-      description: "Thank you for registering for Techfest 2025.",
-    });
-  };
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   toast({
+  //     title: "Registration Successful!",
+  //     description: "Thank you for registering for Techfest 2025.",
+  //   });
+  // };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
+  // const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  //   setFormData({
+  //     ...formData,
+  //     [e.target.name]: e.target.value,
+  //   });
+  // };
 
   return (
     <div className="min-h-screen bg-black">
       <Header />
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
         className="pt-24 pb-16 px-4"
       >
         <div className="container max-w-4xl mx-auto">
-          <motion.h1 
+          <motion.h1
             initial={{ y: -20 }}
             animate={{ y: 0 }}
             className="text-4xl md:text-6xl font-bold mb-8 text-center animate-gradient-y"
@@ -50,14 +50,14 @@ const Register = () => {
           <p className="text-xl text-gray-300 text-center mb-16 max-w-3xl mx-auto">
             Join us at Asia's Largest Science and Technology Festival
           </p>
-          
+
           <motion.div
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="glass-card p-8 md:p-12"
+            className="flex flex-col items-center gap-3 py-6 px-1 md:py-12 md:px-12"
           >
-            <form onSubmit={handleSubmit} className="space-y-6">
+            {/* <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-4">
                 <div>
                   <label className="text-sm font-medium mb-2 block">Full Name</label>
@@ -111,7 +111,30 @@ const Register = () => {
               >
                 Register for Techfest 2024
               </Button>
-            </form>
+            </form> */}
+
+            {/*----------goole form link connect-----------*/}
+
+            <a
+              className="w-[100%] trans flex justify-center items-center active:scale-125 bg-gradient-to-r from-blue-500 to-purple-600  md:w-[80%] h-[60px] rounded-2xl "
+              href="#"
+            >
+              For Nalanda students
+            </a>
+
+            <a
+              className="w-[100%] trans flex justify-center items-center active:scale-125 bg-gradient-to-r from-green-400 via-teal-500 to-blue-500 md:w-[80%] h-[60px] rounded-2xl "
+              href="#"
+            >
+              For other collage students
+            </a>
+
+            <a
+              className="w-[100%] trans flex justify-center items-center active:scale-125 bg-gradient-to-r from-gray-900 to-blue-800 md:w-[80%] h-[60px] rounded-2xl "
+              href="#"
+            >
+              For techxera members
+            </a>
           </motion.div>
         </div>
       </motion.div>

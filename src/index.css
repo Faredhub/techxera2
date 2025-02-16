@@ -83,3 +83,8 @@
 .drop-shadow-neon {
   text-shadow: 0 0 10px #340bec6b, 0 0 20px #152acd7f, 0 0 30px #36a2e688;
 }
+
+/** -----transition------ */
+.trans{
+  transition: all 0.4s ease-in-out;
+}
