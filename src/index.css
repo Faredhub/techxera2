@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -54,7 +54,32 @@
 }
 
 @keyframes gradient {
-  0% { background-position: 0% center; }
-  50% { background-position: 100% center; }
-  100% { background-position: 0% center; }
+  0% {
+    background-position: 0% center;
+  }
+  50% {
+    background-position: 100% center;
+  }
+  100% {
+    background-position: 0% center;
+  }
+}
+
+/* -----------------google font----------------------- **/
+.pacifico-regular {
+  font-family: "Pacifico", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.poppins-regular {
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+/* --------------------------------------------- **/
+
+
+/* ------------- glow text ----------------- */
+.drop-shadow-neon {
+  text-shadow: 0 0 10px #340bec6b, 0 0 20px #152acd7f, 0 0 30px #36a2e688;
 }
