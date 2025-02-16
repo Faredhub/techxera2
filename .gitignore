@@ -1,0 +1,85 @@
+# Node modules (dependencies)
+node_modules/
+
+# Build outputs
+dist/
+build/
+
+# Environment files (sensitive information)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor and IDE settings
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Cache and Temp files
+.DS_Store
+*.tmp
+*.swp
+*.swo
+*.bak
+*.log
+.cache/
+.next/
+out/
+*.lock
+
+# Testing output
+coverage/
+*.lcov
+
+# Service worker cache
+workbox-*
+
+# Miscellaneous
+*.tgz
+*.gzip
+*.zip
+
+# ESLint and Prettier cache
+.eslintcache
+.prettierignore
+.prettiercache
+
+# TypeScript build artifacts
+*.tsbuildinfo
+
+# Package manager
+.pnpm-store/
+
+# Yarn v2
+.yarn/*
+!.yarn/patches/
+!.yarn/plugins/
+!.yarn/releases/
+!.yarn/sdks/
+!.yarn/versions/
+
+# Storybook
+.storybook-out/
+
+# Cypress
+cypress/videos/
+cypress/screenshots/
+
+# MacOS system files
+._*
+Thumbs.db
