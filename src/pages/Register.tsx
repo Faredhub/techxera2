@@ -19,7 +19,7 @@ const Register = () => {
     e.preventDefault();
     toast({
       title: "Registration Successful!",
-      description: "Thank you for registering for Techfest 2024.",
+      description: "Thank you for registering for Techfest 2025.",
     });
   };
 
