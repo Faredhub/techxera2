@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 
 const competitions = [
   {
-    title: "AI/ML Challenge",
+    title: "Deep learning Challenge",
     description: "Build innovative solutions using artificial intelligence and machine learning algorithms.",
     image: "https://images.unsplash.com/photo-1518770660439-4636190af475",
     prize: " 1 Rs",
