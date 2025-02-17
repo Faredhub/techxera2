@@ -1,54 +1,68 @@
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Brain, Code, Palette, Cpu, Shield } from "lucide-react";
+import {
+  Brain,
+  Code,
+  Palette,
+  Cpu,
+  Bot,
+  MemoryStick,
+  MessageCircleQuestion,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { FaFilePdf } from "react-icons/fa6";
+import { FaWhatsapp } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const competitions = [
   {
     title: "CODEXERA",
     description:
       "Build innovative solutions using artificial intelligence and machine learning algorithms.",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475",
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
     prize: " 300Rs",
-    icon: <Brain className="w-8 h-8" />,
+    icon: <Code className="w-8 h-8" />,
     category: "Advanced",
+    whatsAppGropu: "https://chat.whatsapp.com/G0VSDBbn7XJIj4P3I6HMcw",
+    pdf: "https://drive.google.com/file/d/118-CWnwOQ9AHmwcaT0YqZp-QU2zlvu7F/view?usp=drive_link",
   },
   {
     title: "INNOXERA",
     description:
       "Test your programming skills with challenging algorithmic problems.",
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
+    image:
+      "https://cdn-fjald.nitrocdn.com/KFzmISOEYBnVYfzMObuWupjEoUkmSGKh/assets/images/optimized/rev-dc842e8/sabpaisa.in/wp-content/uploads/2023/10/Application-of-IoT-banner.png",
     prize: "300 Rs",
-    icon: <Code className="w-8 h-8" />,
+    icon: <MemoryStick className="w-8 h-8" />,
     category: "Expert",
+    whatsAppGropu: "https://chat.whatsapp.com/CFIrs1VQ72r3fnKCc5aQeB",
+    pdf: "https://drive.google.com/file/d/1159bGwQ2TrwtrFwCyfOapXiuvoy_KJEx/view?usp=drive_link",
   },
   {
     title: "GENXERA",
     description:
       "Design intuitive and beautiful user interfaces for next-gen applications.",
-    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+    image:
+      "https://i.pinimg.com/736x/31/f0/c6/31f0c659103b87187718ac705a138cbc.jpg",
     prize: "300 Rs",
-    icon: <Palette className="w-8 h-8" />,
+    icon: <Bot className="w-8 h-8" />,
     category: "Creative",
+    whatsAppGropu: "https://chat.whatsapp.com/FP9WTob6IehG34KHcoM6Kw",
+    pdf: "https://drive.google.com/file/d/10xPZVn7spCTq1T1ovabvN2V7w0YpWSOu/view?usp=drive_link",
   },
   {
     title: "TechBizNexus",
     description:
       "Create smart solutions using Internet of Things technologies.",
-    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e",
+    image:
+      "https://i.pinimg.com/736x/91/c9/fe/91c9fe894c22dfe20d272ffd73db8225.jpg",
     prize: "300 Rs",
-    icon: <Cpu className="w-8 h-8" />,
+    icon: <MessageCircleQuestion className="w-8 h-8" />,
     category: "Technical",
+    whatsAppGropu: "https://chat.whatsapp.com/GYd0ZkpD1HpFAjAl9ikcoO",
+    pdf: "https://drive.google.com/file/d/113v8JgEgPcVVAGy4SKUJcshHb6nmqOBC/view?usp=drive_link",
   },
-  // {
-  //   title: "Cybersecurity",
-  //   description: "Tackle real-world security challenges and protect digital assets.",
-  //   image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5",
-  //   prize: "0 Rs",
-  //   icon: <Shield className="w-8 h-8" />,
-  //   category: "Security"
-  // }
 ];
 
 const Competitions = () => {
@@ -69,14 +83,11 @@ const Competitions = () => {
           >
             Tech Competitions
           </motion.h1>
-          <motion.p
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.2 }}
-            className="text-xl text-gray-300 text-center mb-16 max-w-3xl mx-auto"
-          >
-            PRIZESWORTH 30 THOUSaND & different goodies/ merchandise
-          </motion.p>
+          <marquee behavior="scroll" direction="left" scrollamount="7">
+            <p className="p-3 nunito text-[20px]">
+              Prizepool worths 30,000/- & different goodies
+            </p>
+          </marquee>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {competitions.map((competition, index) => (
@@ -94,12 +105,6 @@ const Competitions = () => {
                     alt={competition.title}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute top-4 right-4 bg-primary/90 backdrop-blur-sm px-4 py-2 rounded-full text-sm">
-                    Prize: {competition.prize}
-                  </div>
-                  <div className="absolute top-4 left-4 bg-black/50 backdrop-blur-sm px-4 py-2 rounded-full text-sm">
-                    {competition.category}
-                  </div>
                 </div>
                 <div className="p-6">
                   <div className="mb-4 text-primary">{competition.icon}</div>
@@ -110,12 +115,40 @@ const Competitions = () => {
                     {competition.description}
                   </p>
                   <motion.div
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
+                  // whileHover={{ scale: 1.05 }}
+                  // whileTap={{ scale: 0.95 }}
                   >
-                    <Button className="w-full bg-primary hover:bg-primary/90 transition-all duration-300">
-                      Register Now
-                    </Button>
+                    <Link to={"/register"}>
+                      <Button className="w-full bg-primary hover:bg-primary/90 transition-all duration-300">
+                        Register Now
+                      </Button>
+                    </Link>
+                    <div className="flex mt-4 justify-between">
+                      <a
+                        href={competition.pdf}
+                        className="pdf flex items-center gap-1 flex-col"
+                      >
+                        <FaFilePdf size={35} color="#fc4242" />
+                        <a
+                          href={competition.pdf}
+                          className="text-[13px] text-center poppins-regular"
+                        >
+                          Problem statement
+                        </a>
+                      </a>
+                      <a
+                        href={competition.whatsAppGropu}
+                        className="whatsapp flex items-center gap-1 flex-col"
+                      >
+                        <FaWhatsapp size={35} color="green" />
+                        <a
+                          href={competition.whatsAppGropu}
+                          className="text-[13px] text-center poppins-regular"
+                        >
+                          Join WhatsApp group
+                        </a>
+                      </a>
+                    </div>
                   </motion.div>
                 </div>
               </motion.div>
