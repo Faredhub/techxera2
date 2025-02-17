@@ -76,7 +76,7 @@ const Events = () => {
                     <Button 
                       className="bg-primary hover:bg-primary/90 transition-all duration-300 transform hover:scale-105"
                     >
-                      Register Now.
+                      Register Now
                     </Button>
                   </div>
                 </div>
