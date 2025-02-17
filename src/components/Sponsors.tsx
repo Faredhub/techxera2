@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
 interface SponsorsProps {
   darkMode: boolean;
@@ -38,10 +38,11 @@ const sponsors: Record<string, SponsorCategory> = {
 };
 
 const Sponsors: React.FC<SponsorsProps> = ({ darkMode }) => {
+  const text = "Comming soon...";
   return (
-    <motion.section 
+    <motion.section
       className={`py-16 transition-colors duration-300 ${
-        darkMode ? 'bg-gray-900' : 'bg-gray-50'
+        darkMode ? "bg-gray-900" : "bg-gray-50"
       }`}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
@@ -57,10 +58,10 @@ const Sponsors: React.FC<SponsorsProps> = ({ darkMode }) => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          OUR OFFICIAL PARTNER
+          OUR OFFICIAL PARTNER'S
         </motion.h2>
         
-        {Object.entries(sponsors).map(([key, category], categoryIndex) => (
+        {/* {Object.entries(sponsors).map(([key, category], categoryIndex) => (
           <motion.div 
             key={key} 
             className="mb-12"
@@ -100,8 +101,21 @@ const Sponsors: React.FC<SponsorsProps> = ({ darkMode }) => {
               ))}
             </div>
           </motion.div>
-        ))}
+        ))} */}
       </div>
+
+      <p className=" md:text-[30px] text-3xl text-center md:text-2xl poppins-regular mb-12 text-gray-200 max-w-3xl mx-auto leading-relaxed">
+        {text.split("").map((char, index) => (
+          <motion.span
+            key={index}
+            initial={{ opacity: 0, x: -10 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.05, delay: index * 0.1 }}
+          >
+            {char}
+          </motion.span>
+        ))}
+      </p>
     </motion.section>
   );
 };
