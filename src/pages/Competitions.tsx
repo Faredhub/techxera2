@@ -6,74 +6,78 @@ import { Button } from "@/components/ui/button";
 
 const competitions = [
   {
-    title: "Deep learning Challenge",
-    description: "Build innovative solutions using artificial intelligence and machine learning algorithms.",
+    title: "CODEXERA",
+    description:
+      "Build innovative solutions using artificial intelligence and machine learning algorithms.",
     image: "https://images.unsplash.com/photo-1518770660439-4636190af475",
-    prize: " 1 Rs",
+    prize: " 300Rs",
     icon: <Brain className="w-8 h-8" />,
-    category: "Advanced"
+    category: "Advanced",
   },
   {
-    title: "Competitive Coding",
-    description: "Test your programming skills with challenging algorithmic problems.",
+    title: "INNOXERA",
+    description:
+      "Test your programming skills with challenging algorithmic problems.",
     image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
-    prize: ".1 Rs",
+    prize: "300 Rs",
     icon: <Code className="w-8 h-8" />,
-    category: "Expert"
+    category: "Expert",
   },
   {
-    title: "UI/UX Design",
-    description: "Design intuitive and beautiful user interfaces for next-gen applications.",
+    title: "GENXERA",
+    description:
+      "Design intuitive and beautiful user interfaces for next-gen applications.",
     image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-    prize: "0 Rs",
+    prize: "300 Rs",
     icon: <Palette className="w-8 h-8" />,
-    category: "Creative"
+    category: "Creative",
   },
   {
-    title: "IoT Innovation",
-    description: "Create smart solutions using Internet of Things technologies.",
+    title: "TechBizNexus",
+    description:
+      "Create smart solutions using Internet of Things technologies.",
     image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e",
-    prize: "1 Rs",
+    prize: "300 Rs",
     icon: <Cpu className="w-8 h-8" />,
-    category: "Technical"
+    category: "Technical",
   },
-  {
-    title: "Cybersecurity",
-    description: "Tackle real-world security challenges and protect digital assets.",
-    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5",
-    prize: "0 Rs",
-    icon: <Shield className="w-8 h-8" />,
-    category: "Security"
-  }
+  // {
+  //   title: "Cybersecurity",
+  //   description: "Tackle real-world security challenges and protect digital assets.",
+  //   image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5",
+  //   prize: "0 Rs",
+  //   icon: <Shield className="w-8 h-8" />,
+  //   category: "Security"
+  // }
 ];
 
 const Competitions = () => {
   return (
     <div className="min-h-screen bg-black">
       <Header />
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
         className="pt-24 pb-16 px-4"
       >
         <div className="container mx-auto">
-          <motion.h1 
+          <motion.h1
             initial={{ y: -20 }}
             animate={{ y: 0 }}
             className="text-4xl md:text-6xl font-bold mb-8 text-center animate-gradient-y"
           >
             Tech Competitions
           </motion.h1>
-          <motion.p 
+          <motion.p
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2 }}
             className="text-xl text-gray-300 text-center mb-16 max-w-3xl mx-auto"
           >
-            Showcase your skills and compete for prizes worth over 3 Rs
+            PRIZESWORTH 30 THOUSaND & different goodies/ merchandise
           </motion.p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {competitions.map((competition, index) => (
               <motion.div
@@ -85,8 +89,8 @@ const Competitions = () => {
                 className="glass-card overflow-hidden group"
               >
                 <div className="relative h-48 overflow-hidden">
-                  <img 
-                    src={competition.image} 
+                  <img
+                    src={competition.image}
                     alt={competition.title}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
@@ -99,9 +103,16 @@ const Competitions = () => {
                 </div>
                 <div className="p-6">
                   <div className="mb-4 text-primary">{competition.icon}</div>
-                  <h3 className="text-2xl font-semibold mb-2">{competition.title}</h3>
-                  <p className="text-gray-400 mb-6">{competition.description}</p>
-                  <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                  <h3 className="text-2xl font-semibold mb-2">
+                    {competition.title}
+                  </h3>
+                  <p className="text-gray-400 mb-6">
+                    {competition.description}
+                  </p>
+                  <motion.div
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
                     <Button className="w-full bg-primary hover:bg-primary/90 transition-all duration-300">
                       Register Now
                     </Button>
