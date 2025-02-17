@@ -117,7 +117,7 @@ const Register = () => {
 
             <a
               className="w-[100%] trans flex justify-center items-center active:scale-125 bg-gradient-to-r from-violet-950 to-violet-800 md:w-[80%] h-[60px] rounded-2xl "
-              href="#"
+              href="https://forms.gle/XUnpDWsRcf61XuvVA"
             >
               For Nalanda students
             </a>
@@ -131,7 +131,7 @@ const Register = () => {
 
             <a
               className="w-[100%] trans flex justify-center items-center active:scale-125 bg-gradient-to-r from-gray-900 to-blue-800 md:w-[80%] h-[60px] rounded-2xl "
-              href="#"
+              href="https://forms.gle/G1qRDAxtbkuh6rqe8"
             >
               For techxera members
             </a>
