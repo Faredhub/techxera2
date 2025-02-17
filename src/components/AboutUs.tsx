@@ -1,5 +1,7 @@
-import { Trophy, Users, Lightbulb ,CalendarHeart} from "lucide-react";
+import React, { useEffect, useRef } from "react";
+import { Trophy, Users, CalendarHeart } from "lucide-react";
 import { Link } from "react-router-dom";
+import { MdOutlineGroups } from "react-icons/md";
 
 const aboutUsData = [
   {
@@ -22,28 +24,48 @@ const aboutUsData = [
     to:"/events",
     description: "Experience the cultural events.",
   },
+
 ];
 
 const AboutUs = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    let start = 0;
+    const step = () => {
+      start -= 1;
+      if (start <= -container.scrollWidth) {
+        start = container.clientWidth;
+      }
+      container.style.transform = `translateX(${start}px)`;
+      requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }, []);
+
   return (
-    <section className="py-20 px-4 bg-black">
+    <section className="py-20 px-4 bg-black overflow-hidden">
       <div className="container mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-white">
           What's at Techfest?
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div
+          className="flex space-x-8"
+          ref={containerRef}
+          style={{ whiteSpace: "nowrap" }}
+        >
           {aboutUsData.map((feature, index) => (
             <Link
-              to={feature.to}
+              to="/about"
               key={index}
-              className="glass-card p-8 rounded-lg text-center hover:transform hover:scale-105 transition-transform"
+              className="glass-card p-8 rounded-lg text-center hover:transform hover:scale-105 transition-transform inline-block"
+              style={{ minWidth: "300px" }}
             >
-              <div className="mb-6 text-primary inline-block">
-                {feature.icon}
-              </div>
-              <h3 className="text-xl font-semibold mb-4 text-white">
-                {feature.title}
-              </h3>
+              <div className="mb-6 text-primary inline-block">{feature.icon}</div>
+              <h3 className="text-xl font-semibold mb-4 text-white">{feature.title}</h3>
               <p className="text-gray-300">{feature.description}</p>
             </Link>
           ))}
