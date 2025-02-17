@@ -1,6 +1,7 @@
 import chinmayImg from "@/assets/chinmay.jpg";
 import biswanathImg from "@/assets/biswanath.jpg";
 import subrajitImg from "@/assets/subrajit.jpg";
+import { Button } from "./ui/button";
 
 const teamMembers = [
   {
@@ -20,7 +21,6 @@ const teamMembers = [
   },
 ];
 
-
 const Team = () => {
   return (
     <section className="py-20 px-4 bg-black">
@@ -39,10 +39,15 @@ const Team = () => {
                 alt={member.name}
                 className="w-32 h-32 rounded-full mx-auto mb-6 object-cover"
               />
-              <h3 className="text-xl font-semibold mb-2 text-white">{member.name}</h3>
+              <h3 className="text-xl font-semibold mb-2 text-white">
+                {member.name}
+              </h3>
               <p className="text-gray-300">{member.role}</p>
             </div>
           ))}
+        </div>
+        <div className="flex justify-center py-3">
+          <Button>View All</Button>
         </div>
       </div>
     </section>
