@@ -40,73 +40,11 @@ const workshops = [
 const Workshops = () => {
   return (
     <div className="min-h-screen bg-black">
-      <Header />
-      <motion.div 
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        className="pt-24 pb-16 px-4"
-      >
-        <div className="container mx-auto">
-          <motion.h1 
-            initial={{ y: -20 }}
-            animate={{ y: 0 }}
-            className="text-4xl md:text-6xl font-bold mb-8 text-center animate-gradient-y"
-          >
-            Technical Workshops
-          </motion.h1>
-          <motion.p 
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.2 }}
-            className="text-xl text-gray-300 text-center mb-16 max-w-3xl mx-auto"
-          >
-            Learn from industry experts in hands-on technical sessions
-          </motion.p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {workshops.map((workshop, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ scale: 1.03 }}
-                className="glass-card overflow-hidden group"
-              >
-                <div className="relative h-48 overflow-hidden">
-                  <img 
-                    src={workshop.image} 
-                    alt={workshop.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute top-4 right-4 bg-primary/90 backdrop-blur-sm px-4 py-2 rounded-full text-sm">
-                    {workshop.duration}
-                  </div>
-                  <div className="absolute top-4 left-4 bg-black/50 backdrop-blur-sm px-4 py-2 rounded-full text-sm">
-                    {workshop.seats}
-                  </div>
-                </div>
-                <div className="p-6">
-                  <div className="mb-4 text-primary">{workshop.icon}</div>
-                  <h3 className="text-2xl font-semibold mb-2">{workshop.title}</h3>
-                  <p className="text-gray-400 mb-4">{workshop.description}</p>
-                  <div className="flex justify-between items-center mb-4">
-                    <span className="text-primary font-semibold">{workshop.price}</span>
-                    <span className="text-gray-400">{workshop.date}</span>
-                  </div>
-                  <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                    <Button className="w-full bg-primary hover:bg-primary/90 transition-all duration-300">
-                      Register Now
-                    </Button>
-                  </motion.div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </motion.div>
-      <Footer />
+      
+      <div className="w-[100%] bg-white md:w-[50%]">
+              <img className="w-[100%]" src="https://img.freepik.com/free-vector/coming-soon-background-with-focus-light-effect-design_1017-27277.jpg?t=st=1739791769~exp=1739795369~hmac=254627954821e6694f56a99775ac93cf3c702b5817eec8b323cc6c00670edc82&w=740" alt="" />
+            </div>
+     
     </div>
   );
 };
