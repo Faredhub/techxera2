@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Lightbulb, Globe, Heart } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import AboutUs from "@/components/AboutUs";
 
 const initiatives = [
   {
@@ -32,7 +32,8 @@ const Initiatives = () => {
   return (
     <div className="min-h-screen bg-black">
       <Header />
-      <motion.div 
+      
+      {/* <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
@@ -49,6 +50,7 @@ const Initiatives = () => {
           <p className="text-xl text-gray-300 text-center mb-16 max-w-3xl mx-auto">
             Driving technological innovation for social impact
           </p>
+          
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {initiatives.map((initiative, index) => (
@@ -81,7 +83,8 @@ const Initiatives = () => {
             ))}
           </div>
         </div>
-      </motion.div>
+      </motion.div> */}
+      <AboutUs/>
       <Footer />
     </div>
   );
