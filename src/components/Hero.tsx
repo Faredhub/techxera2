@@ -19,10 +19,10 @@ const Hero = () => {
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-          className="text-5xl md:text-7xl drop-shadow-neon nunito mb-8 text-white animate-gradient-y"
+          className="text-5xl md:text-7xl drop-shadow-neon josefin-sans mb-8 text-white animate-gradient-y"
         >
-          <span className="text-[66px]">Synthara</span> <br />{" "}
-          <span className="text-[55px]">2025</span>
+          <span className="text-[46px] md:text-[66px]">Synthara 1.0</span> <br />{" "}
+          <span className="text-[40px] md:text-[55px]">2025</span>
         </motion.h1>
         <motion.p className="text-xl md:text-2xl poppins-regular mb-12 text-gray-200 max-w-3xl mx-auto leading-relaxed">
           {text.split("").map((char, index) => (
