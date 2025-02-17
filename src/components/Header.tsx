@@ -26,7 +26,10 @@ let Header = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.2 }}>
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.2 }}
+          >
             <a
               href="/"
               className="flex items-center space-x-2"
@@ -85,11 +88,12 @@ let Header = () => {
           </nav>
 
           {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-white"
-            onClick={toggleMobileMenu}
-          >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          <button className="md:hidden text-white" onClick={toggleMobileMenu}>
+            {isMobileMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </button>
         </div>
       </div>

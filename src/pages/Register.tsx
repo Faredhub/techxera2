@@ -116,14 +116,14 @@ const Register = () => {
             {/*----------goole form link connect-----------*/}
 
             <a
-              className="w-[100%] trans flex justify-center items-center active:scale-125 bg-gradient-to-r from-blue-500 to-purple-600  md:w-[80%] h-[60px] rounded-2xl "
+              className="w-[100%] trans flex justify-center items-center active:scale-125 bg-gradient-to-r from-violet-950 to-violet-800 md:w-[80%] h-[60px] rounded-2xl "
               href="#"
             >
               For Nalanda students
             </a>
 
             <a
-              className="w-[100%] trans flex justify-center items-center active:scale-125 bg-gradient-to-r from-green-400 via-teal-500 to-blue-500 md:w-[80%] h-[60px] rounded-2xl "
+              className="w-[100%] trans flex justify-center items-center active:scale-125 bg-gradient-to-r from-gray-900 to-teal-900 md:w-[80%] h-[60px] rounded-2xl "
               href="#"
             >
               For other collage students

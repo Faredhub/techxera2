@@ -138,7 +138,7 @@ const Footer: React.FC<FooterProps> = ({ darkMode = true }) => {
             <ul className="space-y-2 text-gray-400">
               <li className="flex items-center gap-2">
                 <Mail size={16} className="text-blue-400" />
-                <span>techxeraclub@thenalanda.com</span>
+                <span>contact@techxera.in</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone size={16} className="text-blue-400" />
