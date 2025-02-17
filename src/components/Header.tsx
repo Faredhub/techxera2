@@ -52,35 +52,35 @@ let Header = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               onClick={() => handleNavigation("/events")}
-              className="text-gray-300 hover:text-white transition-colors"
+              className="text-gray-300 hover:text-white hover:border-b-4 border-blue-700  transition-colors"
             >
               Events
             </motion.button>
             <motion.button
               whileHover={{ scale: 1.05 }}
               onClick={() => handleNavigation("/competitions")}
-              className="text-gray-300 hover:text-white transition-colors"
+              className="text-gray-300 hover:border-b-4 border-blue-700 hover:text-white transition-colors"
             >
               Competitions
             </motion.button>
             <motion.button
               whileHover={{ scale: 1.05 }}
               onClick={() => handleNavigation("/workshops")}
-              className="text-gray-300 hover:text-white transition-colors"
+              className="text-gray-300 hover:border-b-4 border-blue-700 hover:text-white transition-colors"
             >
               Workshops
             </motion.button>
             <motion.button
               whileHover={{ scale: 1.05 }}
               onClick={() => handleNavigation("/initiatives")}
-              className="text-gray-300 hover:text-white transition-colors"
+              className="text-gray-300 hover:border-b-4 border-blue-700 hover:text-white transition-colors"
             >
               About Us
             </motion.button>
             <motion.div whileHover={{ scale: 1.05 }}>
               <Button
                 onClick={() => handleNavigation("/register")}
-                className="bg-primary hover:bg-primary/90"
+                className="bg-primary  hover:bg-primary/90"
               >
                 Register Now
               </Button>

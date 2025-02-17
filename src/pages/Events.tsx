@@ -100,8 +100,8 @@ const Events = () => {
                 </motion.span>
               ))}
             </p> */}
-            <div className="w-[100%] blurred-edge rounded-md rounded-b-[40px] overflow-hidden md:w-[50%]">
-              <img className="w-[100%]" src="src\assets\cat.jpg" alt="" />
+            <div className="w-[100%] bg-white md:w-[50%]">
+              <img className="w-[100%]" src="https://img.freepik.com/free-vector/coming-soon-background-with-focus-light-effect-design_1017-27277.jpg?t=st=1739791769~exp=1739795369~hmac=254627954821e6694f56a99775ac93cf3c702b5817eec8b323cc6c00670edc82&w=740" alt="" />
             </div>
           </div>
         </motion.div>
