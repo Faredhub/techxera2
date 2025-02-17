@@ -2,8 +2,7 @@ import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Lightbulb, Globe, Heart } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import Feather from "@/components/Features";
+import AboutUs from "@/components/AboutUs";
 
 const initiatives = [
   {
@@ -85,7 +84,7 @@ const Initiatives = () => {
           </div>
         </div>
       </motion.div> */}
-      <Feather/>
+      <AboutUs/>
       <Footer />
     </div>
   );
