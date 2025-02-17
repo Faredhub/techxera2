@@ -1,6 +1,7 @@
 import { Trophy, Users, Lightbulb ,CalendarHeart} from "lucide-react";
 import { Link } from "react-router-dom";
 import { MdOutlineGroups } from "react-icons/md";
+import { FcCollaboration } from "react-icons/fc";
 
 const aboutUsData = [
   {
@@ -21,7 +22,7 @@ const aboutUsData = [
     description: "Our mission is to empower the next generation of tech leaders by creating an inclusive environment that nurtures talent and drives innovation. We believe that through shared knowledge and collective effort, we can transform ideas into impactful solutions. Whether you’re just beginning your tech journey or are an experienced professional, Techxera is dedicated to helping you grow and succeed",
   },
   {
-    icon: <CalendarHeart className="w-8 h-8" />,
+    icon: <FcCollaboration className="w-8 h-8" />,
     title: "Our Collaboration",
     description: "We are proud to announce our collaboration with the 10x Club by Coding Ninjas. This partnership brings together brilliant minds and cutting-edge resources, offering enhanced opportunities for mentorship, skill development, and hands-on projects. Through this alliance, we aim to elevate the learning experience and expand the horizons for all our members.",
   },
