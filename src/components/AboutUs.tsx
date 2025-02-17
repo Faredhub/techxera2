@@ -1,26 +1,30 @@
 import React, { useEffect, useRef } from "react";
 import { Trophy, Users, CalendarHeart } from "lucide-react";
 import { Link } from "react-router-dom";
+import { MdOutlineGroups } from "react-icons/md";
 
 const aboutUsData = [
   {
     icon: <Trophy className="w-8 h-8" />,
     title: "Competitions",
-    to: "/competitions",
-    description: "Participate in cutting-edge technology competitions with prizes worth millions.",
+    to:"/competitions",
+    description:
+      "Participate in cutting-edge technology competitions with prizes worth millions.",
   },
   {
     icon: <Users className="w-8 h-8" />,
     title: "Workshops",
-    to: "/workshops",
-    description: "Learn from industry experts in hands-on workshops and technical sessions.",
+    to:"/workshops",
+    description:
+      "Learn from industry experts in hands-on workshops and technical sessions.",
   },
   {
     icon: <CalendarHeart className="w-8 h-8" />,
     title: "Events",
-    to: "/events",
+    to:"/events",
     description: "Experience the cultural events.",
   },
+
 ];
 
 const AboutUs = () => {
@@ -55,7 +59,7 @@ const AboutUs = () => {
         >
           {aboutUsData.map((feature, index) => (
             <Link
-              to={feature.to}
+              to="/about"
               key={index}
               className="glass-card p-8 rounded-lg text-center hover:transform hover:scale-105 transition-transform inline-block"
               style={{ minWidth: "300px" }}
