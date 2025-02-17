@@ -87,8 +87,8 @@ const Events = () => {
           </div>
           {/* ------- comming soon------ */}
 
-          <div className="flex justify-center">
-            <p className=" md:text-[40px] text-3xl text-center md:text-2xl poppins-regular mb-12 text-gray-200 max-w-3xl mx-auto leading-relaxed">
+          <div className="flex flex-col items-center justify-center">
+            {/* <p className=" md:text-[40px] text-3xl text-center md:text-2xl poppins-regular mb-12 text-gray-200 max-w-3xl mx-auto leading-relaxed">
               {text.split("").map((char, index) => (
                 <motion.span
                   key={index}
@@ -99,11 +99,13 @@ const Events = () => {
                   {char}
                 </motion.span>
               ))}
-            </p>
+            </p> */}
+            <div className="w-[100%] blurred-edge rounded-md rounded-b-[40px] overflow-hidden md:w-[50%]">
+              <img className="w-[100%]" src="src\assets\cat.jpg" alt="" />
+            </div>
           </div>
         </motion.div>
       </div>
-      <Footer />
     </div>
   );
 };
