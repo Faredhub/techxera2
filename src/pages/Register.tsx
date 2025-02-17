@@ -48,7 +48,7 @@ const Register = () => {
             Register Now
           </motion.h1>
           <p className="text-xl text-gray-300 text-center mb-16 max-w-3xl mx-auto">
-            Join us at Asia's Largest Science and Technology Festival
+            Join us at Nalanda's Largest Technology Festival
           </p>
 
           <motion.div
@@ -119,21 +119,21 @@ const Register = () => {
               className="w-[100%] trans flex justify-center items-center active:scale-125 bg-gradient-to-r from-violet-950 to-violet-800 md:w-[80%] h-[60px] rounded-2xl "
               href="https://forms.gle/XUnpDWsRcf61XuvVA"
             >
-              For Nalanda students
+              FOR NALANDA STUDENT'S
             </a>
 
             <a
               className="w-[100%] trans flex justify-center items-center active:scale-125 bg-gradient-to-r from-gray-900 to-teal-900 md:w-[80%] h-[60px] rounded-2xl "
               href="#"
             >
-              For other collage students
+              FOR OTHER COLLEGE STUDENT'S
             </a>
 
             <a
               className="w-[100%] trans flex justify-center items-center active:scale-125 bg-gradient-to-r from-gray-900 to-blue-800 md:w-[80%] h-[60px] rounded-2xl "
               href="https://forms.gle/G1qRDAxtbkuh6rqe8"
             >
-              For techxera members
+              FOR TECHXERA MEMBER'S
             </a>
           </motion.div>
         </div>
