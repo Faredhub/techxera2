@@ -128,10 +128,13 @@ const Competitions = () => {
                         href={competition.pdf}
                         className="pdf flex items-center gap-1 flex-col"
                       >
-                        <FaFilePdf size={35} color="#fc4242" />
+                        <FaFilePdf
+                          size={32}
+                          color="#fc4242"
+                        />
                         <a
                           href={competition.pdf}
-                          className="text-[13px] text-center poppins-regular"
+                          className="text-[10px] md:text-[13px] text-center poppins-regular"
                         >
                           Problem statement
                         </a>
@@ -140,10 +143,13 @@ const Competitions = () => {
                         href={competition.whatsAppGropu}
                         className="whatsapp flex items-center gap-1 flex-col"
                       >
-                        <FaWhatsapp size={35} color="green" />
+                        <FaWhatsapp
+                          color="green"
+                          size={32}
+                        />
                         <a
                           href={competition.whatsAppGropu}
-                          className="text-[13px] text-center poppins-regular"
+                          className="text-[10px] md:text-[13px] text-center poppins-regular"
                         >
                           Join WhatsApp group
                         </a>
