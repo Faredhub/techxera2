@@ -41,7 +41,7 @@ const AboutUs = () => {
       <div className="container mx-auto relative z-10">
         <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-16 text-white tracking-wide">
           About <span className="text-green-400">TECH</span>
-          <span className="text-red-500">XERA</span>
+          <span className="text-blue-500">XERA</span>
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {aboutUsData.map((feature, index) => (
@@ -49,15 +49,19 @@ const AboutUs = () => {
               key={index}
               className="relative p-8 rounded-lg text-center transition-transform transform hover:scale-105 group"
             >
-              {/* Neon Glow Effect */}
-              <div className="absolute inset-0 rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              {/* Neon Border Effect */}
+              <div
+                className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
                 style={{
-                  background: "linear-gradient(145deg, #00ff41, #ff3131)",
+                  border: "2px solid transparent",
+                  background:
+                    "linear-gradient(145deg, black, black) padding-box, linear-gradient(145deg, #00ff7f, #0044cc) border-box",
+                  filter: "blur(8px)",
                 }}
               ></div>
 
               {/* Card Content */}
-              <div className="relative z-10 p-8 bg-black bg-opacity-30 rounded-lg shadow-lg backdrop-blur-xl">
+              <div className="relative z-10 p-8 bg-black bg-opacity-40 rounded-lg shadow-lg backdrop-blur-xl">
                 <div className="mb-6 inline-block text-primary">{feature.icon}</div>
                 <h3 className="text-xl font-semibold mb-4 text-white">
                   {feature.title}
@@ -70,7 +74,7 @@ const AboutUs = () => {
       </div>
 
       {/* Background Animation */}
-      <div className="absolute inset-0 animate-pulse bg-gradient-to-br from-green-900 via-black to-red-900 opacity-40"></div>
+      <div className="absolute inset-0 animate-pulse bg-gradient-to-br from-green-900 via-black to-blue-900 opacity-30"></div>
     </section>
   );
 };
