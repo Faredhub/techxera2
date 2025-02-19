@@ -51,17 +51,17 @@ const AboutUs = () => {
             >
               {/* Neon Border Effect */}
               <div
-                className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+                className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-85 transition-opacity duration-500 pointer-events-none"
                 style={{
                   border: "2px solid transparent",
                   background:
                     "linear-gradient(145deg, black, black) padding-box, linear-gradient(145deg, #00ff7f, #0044cc) border-box",
-                  filter: "blur(8px)",
+                  filter: "blur(6px)",
                 }}
               ></div>
 
-              {/* Card Content */}
-              <div className="relative z-10 p-8 bg-black bg-opacity-40 rounded-lg shadow-lg backdrop-blur-xl">
+              {/* Transparent Background on Hover */}
+              <div className="relative z-10 p-8 bg-black bg-opacity-40 group-hover:bg-opacity-0 rounded-lg shadow-lg backdrop-blur-xl transition-all duration-500">
                 <div className="mb-6 inline-block text-primary">{feature.icon}</div>
                 <h3 className="text-xl font-semibold mb-4 text-white">
                   {feature.title}
