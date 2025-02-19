@@ -38,11 +38,10 @@ const sponsors: Record<string, SponsorCategory> = {
 };
 
 const Sponsors: React.FC<SponsorsProps> = ({ darkMode }) => {
-  const text = "Coming Soon...";
-
+  const text = "Comming soon...";
   return (
     <motion.section
-      className={`py-16 relative overflow-hidden transition-colors duration-300 ${
+      className={`py-16 transition-colors duration-300 ${
         darkMode ? "bg-gray-900" : "bg-gray-50"
       }`}
       initial={{ opacity: 0 }}
@@ -50,82 +49,62 @@ const Sponsors: React.FC<SponsorsProps> = ({ darkMode }) => {
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
     >
-      {/* Gradient Background Animation */}
-      <div className="absolute inset-0 bg-gradient-to-br from-green-900 via-black to-blue-900 opacity-40 animate-pulse" />
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Title */}
-        <motion.h2
-          className={`text-4xl font-extrabold text-center mb-16 ${
-            darkMode ? "text-white" : "text-gray-900"
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.h2 
+          className={`text-3xl font-bold text-center mb-12 ${
+            darkMode ? 'text-white' : 'text-gray-900'
           }`}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          OUR OFFICIAL PARTNERS
+          OUR OFFICIAL PARTNER'S
         </motion.h2>
-
-        {Object.entries(sponsors).map(([key, category], categoryIndex) => (
-          <motion.div
-            key={key}
-            className="mb-16"
+        
+        {/* {Object.entries(sponsors).map(([key, category], categoryIndex) => (
+          <motion.div 
+            key={key} 
+            className="mb-12"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: categoryIndex * 0.2 }}
           >
-            {/* Sponsor Category Title */}
-            <h3
-              className={`text-2xl font-semibold text-center mb-8 ${
-                darkMode ? "text-gray-200" : "text-gray-800"
-              }`}
-            >
+            <h3 className={`text-xl font-semibold text-center mb-6 ${
+              darkMode ? 'text-gray-200' : 'text-gray-800'
+            }`}>
               {category.name}
             </h3>
-
-            {/* Sponsor Cards */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {category.logos.map((logo, index) => (
                 <motion.div
                   key={index}
-                  className="relative group"
+                  className={`flex items-center justify-center p-4 rounded-lg ${
+                    darkMode 
+                      ? 'bg-gray-800 hover:bg-gray-700' 
+                      : 'bg-white hover:bg-gray-50'
+                  } transition-colors duration-300 shadow-lg`}
+                  whileHover={{ scale: 1.05 }}
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  whileHover={{ scale: 1.1 }}
                 >
-                  {/* Neon Glow Border on Hover */}
-                  <div
-                    className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-90 transition-opacity duration-500 pointer-events-none"
-                    style={{
-                      border: "2px solid transparent",
-                      background:
-                        "linear-gradient(145deg, black, black) padding-box, linear-gradient(145deg, #00ff7f, #0044cc) border-box",
-                      filter: "blur(8px)",
-                    }}
+                  <motion.img
+                    src={logo}
+                    alt={`${category.name} sponsor ${index + 1}`}
+                    className="max-h-20 object-contain filter dark:brightness-90"
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ duration: 0.2 }}
                   />
-
-                  {/* Frosted Glass Background */}
-                  <div className="relative z-10 flex items-center justify-center p-6 rounded-xl bg-black bg-opacity-40 group-hover:bg-opacity-10 backdrop-blur-md transition-all duration-500 shadow-lg">
-                    <motion.img
-                      src={logo}
-                      alt={`${category.name} sponsor ${index + 1}`}
-                      className="max-h-20 object-contain filter dark:brightness-90"
-                      whileHover={{ scale: 1.15 }}
-                      transition={{ duration: 0.2 }}
-                    />
-                  </div>
                 </motion.div>
               ))}
             </div>
           </motion.div>
-        ))}
+        ))} */}
       </div>
 
-      {/* "Coming Soon" Animated Text */}
-      <p className="text-3xl text-center text-gray-200 poppins-regular max-w-3xl mx-auto leading-relaxed mt-16">
+      <p className=" md:text-[30px] text-3xl text-center md:text-2xl poppins-regular mb-12 text-gray-200 max-w-3xl mx-auto leading-relaxed">
         {text.split("").map((char, index) => (
           <motion.span
             key={index}
