@@ -39,7 +39,7 @@ const AboutUs = () => {
   return (
     <section className="py-20 px-4 bg-black relative overflow-hidden">
       <div className="container mx-auto relative z-10">
-        <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-16 text-white tracking-wide">
+        <h2 className="text-4xl md:text-5xl mt-6 font-extrabold text-center mb-16 text-white tracking-wide">
           About <span className="text-green-400">TECH</span>
           <span className="text-blue-500">XERA</span>
         </h2>
@@ -62,7 +62,7 @@ const AboutUs = () => {
               ></div>
 
               {/* iOS-Style Transparent Background on Hover */}
-              <div className="relative z-10 p-8 bg-black bg-opacity-40 rounded-lg shadow-lg backdrop-blur-md transition-all duration-500 group-hover:bg-opacity-10">
+              <div className="relative z-10 py-6 px-1 bg-black bg-opacity-40 rounded-lg shadow-lg backdrop-blur-md transition-all duration-500 group-hover:bg-opacity-10">
                 <div className="mb-6 inline-block text-primary">{feature.icon}</div>
                 <h3 className="text-xl font-semibold mb-4 text-white">
                   {feature.title}
