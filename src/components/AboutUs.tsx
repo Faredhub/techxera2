@@ -43,6 +43,7 @@ const AboutUs = () => {
           About <span className="text-green-400">TECH</span>
           <span className="text-blue-500">XERA</span>
         </h2>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {aboutUsData.map((feature, index) => (
             <div
@@ -51,7 +52,7 @@ const AboutUs = () => {
             >
               {/* Neon Border Effect */}
               <div
-                className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-85 transition-opacity duration-500 pointer-events-none"
+                className="absolute inset-0 rounded-lg opacity-85 group-hover:opacity-85 transition-opacity duration-500 pointer-events-none"
                 style={{
                   border: "2px solid transparent",
                   background:
@@ -60,8 +61,8 @@ const AboutUs = () => {
                 }}
               ></div>
 
-              {/* Transparent Background on Hover */}
-              <div className="relative z-10 p-8 bg-black bg-opacity-40 group-hover:bg-opacity-0 rounded-lg shadow-lg backdrop-blur-xl transition-all duration-500">
+              {/* iOS-Style Transparent Background on Hover */}
+              <div className="relative z-10 p-8 bg-black bg-opacity-40 rounded-lg shadow-lg backdrop-blur-md transition-all duration-500 group-hover:bg-opacity-10">
                 <div className="mb-6 inline-block text-primary">{feature.icon}</div>
                 <h3 className="text-xl font-semibold mb-4 text-white">
                   {feature.title}
