@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
-  const text = "-Merging Ideas to create stellar tech";
+  const text = "- Merging Ideas to create stellar tech";
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
