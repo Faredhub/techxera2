@@ -86,11 +86,10 @@
 .josefin-sans {
   font-family: "Josefin Sans", serif;
   font-optical-sizing: auto;
-  font-weight: 700;
+  font-weight: 800;
   font-style: normal;
 }
 /* --------------------------------------------- **/
-
 
 /* ------------- glow text ----------------- */
 .drop-shadow-neon {
@@ -98,11 +97,9 @@
 }
 
 /** -----transition------ */
-.trans{
+.trans {
   transition: all 0.4s ease-in-out;
 }
-
-
 
 .blurred-edge {
   position: relative;
@@ -121,4 +118,8 @@
   background: inherit;
   filter: blur(10px);
   z-index: -1;
+}
+
+.scroll-hide::-webkit-scrollbar {
+  visibility: hidden;
 }
