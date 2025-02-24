@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import sponsorLogo from "/workspaces/techxera2/src/assets/Untitled_design-removebg-preview.png"; // Importing the image
 
 interface SponsorsProps {
   darkMode: boolean;
@@ -38,6 +37,9 @@ const sponsors: Record<string, SponsorCategory> = {
   },
 };
 
+// Using the correct public path for the image
+const sponsorLogo = "/Untitled_design-removebg-preview.png";
+
 const Sponsors: React.FC<SponsorsProps> = ({ darkMode }) => {
   const text = "Coming soon...";
 
@@ -60,10 +62,10 @@ const Sponsors: React.FC<SponsorsProps> = ({ darkMode }) => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          OUR OFFICIAL PARTNER'S
+          OUR OFFICIAL PARTNERS
         </motion.h2>
 
-        {/* Highlighted Sponsor Image */}
+        {/* Sponsor Highlight Image */}
         <motion.div
           className="flex justify-center mb-12 relative"
           initial={{ opacity: 0, scale: 0.8 }}
@@ -84,67 +86,21 @@ const Sponsors: React.FC<SponsorsProps> = ({ darkMode }) => {
           />
         </motion.div>
 
-        {/* Uncomment this to display sponsor categories */}
-        {/* {Object.entries(sponsors).map(([key, category], categoryIndex) => (
-          <motion.div
-            key={key}
-            className="mb-12"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: categoryIndex * 0.2 }}
-          >
-            <h3
-              className={`text-xl font-semibold text-center mb-6 ${
-                darkMode ? "text-gray-200" : "text-gray-800"
-              }`}
+        {/* Animated "Coming Soon" Text */}
+        <p className="text-3xl text-center md:text-2xl poppins-regular mb-12 text-gray-200 max-w-3xl mx-auto leading-relaxed">
+          {text.split("").map((char, index) => (
+            <motion.span
+              key={index}
+              initial={{ opacity: 0, x: -10 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.05, delay: index * 0.1 }}
+              className="inline-block"
             >
-              {category.name}
-            </h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {category.logos.map((logo, index) => (
-                <motion.div
-                  key={index}
-                  className="flex items-center justify-center p-4 rounded-lg border-2 border-transparent transition-all duration-300 shadow-lg relative overflow-hidden"
-                  style={{
-                    background: darkMode ? "rgba(45,45,45,0.8)" : "#fff",
-                    boxShadow: darkMode
-                      ? "0px 0px 15px rgba(255, 255, 255, 0.3)"
-                      : "0px 0px 15px rgba(0, 0, 0, 0.1)",
-                  }}
-                  whileHover={{ scale: 1.05, boxShadow: "0px 0px 25px rgba(255,165,0,0.6)" }}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                >
-                  <motion.img
-                    src={logo}
-                    alt={`${category.name} sponsor ${index + 1}`}
-                    className="max-h-20 object-contain transition-transform duration-300"
-                    whileHover={{ scale: 1.1 }}
-                  />
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        ))} */}
+              {char}
+            </motion.span>
+          ))}
+        </p>
       </div>
-
-      {/* Animated "Coming Soon" Text */}
-      <p className="text-3xl text-center md:text-2xl poppins-regular mb-12 text-gray-200 max-w-3xl mx-auto leading-relaxed">
-        {text.split("").map((char, index) => (
-          <motion.span
-            key={index}
-            initial={{ opacity: 0, x: -10 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.05, delay: index * 0.1 }}
-            className="inline-block"
-          >
-            {char}
-          </motion.span>
-        ))}
-      </p>
     </motion.section>
   );
 };
