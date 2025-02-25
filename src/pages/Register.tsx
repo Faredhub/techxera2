@@ -43,7 +43,7 @@ const Register = () => {
           <motion.h1
             initial={{ y: -20 }}
             animate={{ y: 0 }}
-            className="text-4xl md:text-6xl font-bold mb-8 text-center animate-gradient-y"
+            className="text-4xl md:text-6xl font-bold mb-8 text-center bg-gradient-to-r from-blue-500 via-green-400 to-cyan-500 bg-clip-text text-transparent hover:scale-105 transition-all duration-300"
           >
             Register Now
           </motion.h1>
@@ -60,46 +60,46 @@ const Register = () => {
             {/* <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-4">
                 <div>
-                  <label className="text-sm font-medium mb-2 block">Full Name</label>
+                  <label className="text-sm font-medium mb-2 block text-white">Full Name</label>
                   <Input
                     type="text"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="bg-black/50 border-gray-700"
+                    className="bg-black/50 border-gray-700 text-white"
                     required
                   />
                 </div>
                 <div>
-                  <label className="text-sm font-medium mb-2 block">Email Address</label>
+                  <label className="text-sm font-medium mb-2 block text-white">Email Address</label>
                   <Input
                     type="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="bg-black/50 border-gray-700"
+                    className="bg-black/50 border-gray-700 text-white"
                     required
                   />
                 </div>
                 <div>
-                  <label className="text-sm font-medium mb-2 block">College/University</label>
+                  <label className="text-sm font-medium mb-2 block text-white">College/University</label>
                   <Input
                     type="text"
                     name="college"
                     value={formData.college}
                     onChange={handleChange}
-                    className="bg-black/50 border-gray-700"
+                    className="bg-black/50 border-gray-700 text-white"
                     required
                   />
                 </div>
                 <div>
-                  <label className="text-sm font-medium mb-2 block">Phone Number</label>
+                  <label className="text-sm font-medium mb-2 block text-white">Phone Number</label>
                   <Input
                     type="tel"
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="bg-black/50 border-gray-700"
+                    className="bg-black/50 border-gray-700 text-white"
                     required
                   />
                 </div>
@@ -107,30 +107,30 @@ const Register = () => {
               
               <Button 
                 type="submit"
-                className="w-full bg-primary hover:bg-primary/90 py-6 text-lg"
+                className="w-full bg-gradient-to-r from-blue-700 to-green-500 hover:shadow-[0px_0px_20px_#0d7377] hover:from-green-500 hover:to-blue-700 transition-all duration-300 py-6 text-lg"
               >
-                Register for Techfest 2024
+                Register for Techfest 2025
               </Button>
             </form> */}
 
             {/*----------goole form link connect-----------*/}
 
             <a
-              className="w-[100%] trans flex justify-center items-center active:scale-125 bg-gradient-to-r from-violet-950 to-violet-800 md:w-[80%] h-[60px] rounded-2xl "
+              className="w-[100%] trans flex justify-center items-center active:scale-110 bg-gradient-to-r from-violet-800 to-purple-500 md:w-[80%] h-[60px] rounded-2xl text-white text-lg font-semibold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-[0px_0px_20px_#0d7377] hover:from-blue-700 hover:to-green-500"
               href="https://forms.gle/XUnpDWsRcf61XuvVA"
             >
               FOR NALANDA STUDENT'S
             </a>
 
             <a
-              className="w-[100%] trans flex justify-center items-center active:scale-125 bg-gradient-to-r from-gray-900 to-teal-900 md:w-[80%] h-[60px] rounded-2xl "
-              href="#"
+              className="w-[100%] trans flex justify-center items-center active:scale-110 bg-gradient-to-r from-gray-900 to-teal-900 md:w-[80%] h-[60px] rounded-2xl text-white text-lg font-semibold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-[0px_0px_20px_#0d7377] hover:from-blue-700 hover:to-green-500"
+              href="https://forms.gle/AbfxreY57ERoWfK19"
             >
               FOR OTHER COLLEGE STUDENT'S
             </a>
 
             <a
-              className="w-[100%] trans flex justify-center items-center active:scale-125 bg-gradient-to-r from-gray-900 to-blue-800 md:w-[80%] h-[60px] rounded-2xl "
+              className="w-[100%] trans flex justify-center items-center active:scale-110 bg-gradient-to-r from-gray-900 to-blue-800 md:w-[80%] h-[60px] rounded-2xl text-white text-lg font-semibold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-[0px_0px_20px_#0d7377] hover:from-blue-700 hover:to-green-500"
               href="https://forms.gle/G1qRDAxtbkuh6rqe8"
             >
               FOR TECHXERA MEMBER'S
