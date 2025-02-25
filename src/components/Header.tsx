@@ -43,7 +43,7 @@ let Header = () => {
                 alt="Techfest Logo"
                 className="w-10 h-10 rounded-full"
               />
-              <span className="text-2xl font-bold text-white">TECHFEST</span>
+              <span className="text-2xl font-bold text-white">TECHXERA</span>
             </a>
           </motion.div>
 
