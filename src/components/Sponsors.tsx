@@ -28,26 +28,26 @@ const sponsors = [
 ];
 
 const Sponsors: React.FC<SponsorsProps> = ({ darkMode }) => {
-  const controls = useAnimation();
   const [isDragging, setIsDragging] = useState(false);
+  const controls = useAnimation();
   const sliderRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!isDragging) {
+    const startSlider = () => {
       controls.start({
         x: ["0%", "-100%"],
-        transition: { repeat: Infinity, ease: "linear", duration: 15 },
+        transition: {
+          ease: "linear",
+          duration: 15,
+          repeat: Infinity,
+        },
       });
+    };
+
+    if (!isDragging) {
+      startSlider();
     }
   }, [isDragging, controls]);
-
-  const handleDragEnd = () => {
-    setIsDragging(false);
-    controls.start({
-      x: ["0%", "-100%"],
-      transition: { repeat: Infinity, ease: "linear", duration: 15 },
-    });
-  };
 
   return (
     <motion.section
@@ -68,8 +68,8 @@ const Sponsors: React.FC<SponsorsProps> = ({ darkMode }) => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <span className="bg-gradient-to-r from-cyan-600  to-teal-400 bg-clip-text text-transparent">
-            OUR OFFICIAL 
+          <span className="bg-gradient-to-r from-teal-300  to-blue-600 bg-clip-text text-transparent">
+            OUR OFFICIAL
           </span>{" "}
           <span className="bg-gradient-to-r from-green-400 via-green-500 to-green-600 bg-clip-text text-transparent">
             PARTNERS
@@ -86,7 +86,7 @@ const Sponsors: React.FC<SponsorsProps> = ({ darkMode }) => {
           dragConstraints={{ left: -500, right: 0 }}
           animate={controls}
           onDragStart={() => setIsDragging(true)}
-          onDragEnd={handleDragEnd}
+          onDragEnd={() => setIsDragging(false)}
         >
           {[...Partners, ...Partners].map((sponsor, index) => (
             <div key={index} className="flex flex-col gap-2 items-center">
@@ -111,7 +111,7 @@ const Sponsors: React.FC<SponsorsProps> = ({ darkMode }) => {
             dragConstraints={{ left: -500, right: 0 }}
             animate={controls}
             onDragStart={() => setIsDragging(true)}
-            onDragEnd={handleDragEnd}
+            onDragEnd={() => setIsDragging(false)}
           >
             {sponsors.map((sponsor, index) => (
               <div key={index} className="w-[150px] md:w-[200px]">
