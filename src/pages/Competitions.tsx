@@ -38,7 +38,7 @@ const competitions = [
     icon: <Cpu className="w-8 h-8 text-green-400 group-hover:text-green-500" />,
     category: "Expert",
     whatsAppGropu: "https://chat.whatsapp.com/CFIrs1VQ72r3fnKCc5aQeB",
-    pdf: "https://drive.google.com/file/d/16rabtsVNtCsmpVbrs1jjXqhosKbTJQpj/view?usp=drive_link",
+    pdf: "https://drive.google.com/file/d/1weJ1ySIzDIm-Y-lZsZEs_o6e_htPyaxa/view?usp=drive_link",
   },
   {
     title: "TechBizNexus",
