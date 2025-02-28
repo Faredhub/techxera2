@@ -26,7 +26,7 @@ const competitions = [
     icon: <Code className="w-8 h-8 text-blue-400 group-hover:text-blue-500" />,
     category: "Advanced",
     whatsAppGropu: "https://chat.whatsapp.com/G0VSDBbn7XJIj4P3I6HMcw",
-    pdf: "https://drive.google.com/file/d/1jnpilxntKRpLQExvDekOmvVYWc2s6od5/view?usp=sharing",
+    pdf: "https://drive.google.com/file/d/1a_bRrtMr0hzkJgWXFImkM5jkuhjemKl7/view?usp=drive_link",
   },
   {
     title: "INNOXERA",
@@ -38,7 +38,7 @@ const competitions = [
     icon: <Cpu className="w-8 h-8 text-green-400 group-hover:text-green-500" />,
     category: "Expert",
     whatsAppGropu: "https://chat.whatsapp.com/CFIrs1VQ72r3fnKCc5aQeB",
-    pdf: "https://drive.google.com/file/d/1DH8s5T3c2DGA3k0o7VhI_7iAwMuEuZw1/view?usp=sharing",
+    pdf: "https://drive.google.com/file/d/16rabtsVNtCsmpVbrs1jjXqhosKbTJQpj/view?usp=drive_link",
   },
   {
     title: "TechBizNexus",
@@ -52,7 +52,7 @@ const competitions = [
     ),
     category: "Technical",
     whatsAppGropu: "https://chat.whatsapp.com/GYd0ZkpD1HpFAjAl9ikcoO",
-    pdf: "https://drive.google.com/file/d/1QZ-s9-BmvNXiP2HR6xNgs8uj1_x-Kg9q/view?usp=sharing",
+    pdf: "https://drive.google.com/file/d/16rabtsVNtCsmpVbrs1jjXqhosKbTJQpj/view?usp=drive_link",
   },
 ];
 
