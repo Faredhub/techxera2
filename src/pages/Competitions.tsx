@@ -152,7 +152,7 @@ const Competitions = () => {
                       >
                         <FaFilePdf size={32} color="#fc4242" />
                         <span className="text-[10px] md:text-[13px] text-center poppins-regular">
-                          Problem statement
+                          Rules & Regulations
                         </span>
                       </a>
                       <a
