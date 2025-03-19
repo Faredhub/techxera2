@@ -54,6 +54,20 @@ const competitions = [
     whatsAppGropu: "https://chat.whatsapp.com/GYd0ZkpD1HpFAjAl9ikcoO",
     pdf: "https://drive.google.com/file/d/16rabtsVNtCsmpVbrs1jjXqhosKbTJQpj/view?usp=drive_link",
   },
+  {
+    title: "AI Innovative Challenge",
+    description:
+      "AI Innovate Challenge is a competition where participants use artificial intelligence to build innovative solutions, pushing the boundaries of technology and creativity. Whether it's automation, machine learning models, or AI-powered applications, this event challenges minds to create the future.",
+    image:
+      "https://i.pinimg.com/736x/91/c9/fe/91c9fe894c22dfe20d272ffd73db8225.jpg",
+    prize: "300 Rs",
+    icon: (
+      <MessageCircleQuestion className="w-8 h-8 text-yellow-400 group-hover:text-yellow-500" />
+    ),
+    category: "Technical",
+    whatsAppGropu: "https://chat.whatsapp.com/GYd0ZkpD1HpFAjAl9ikcoO",
+    pdf: "https://drive.google.com/file/d/16rabtsVNtCsmpVbrs1jjXqhosKbTJQpj/view?usp=drive_link",
+  },
 ];
 
 const Competitions = () => {
