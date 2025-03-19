@@ -66,7 +66,7 @@ const competitions = [
     ),
     category: "Technical",
     whatsAppGropu: "https://chat.whatsapp.com/GYd0ZkpD1HpFAjAl9ikcoO",
-    pdf: "",
+    pdf: "https://drive.google.com/file/d/1-MTjqh25YQH5MfdC8wRNcJmTbEOjOfm_/view?usp=drivesdk",
   },
 ];
 
