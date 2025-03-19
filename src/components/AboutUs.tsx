@@ -1,5 +1,4 @@
-import { Trophy, Users, Lightbulb ,CalendarHeart} from "lucide-react";
-import { Link } from "react-router-dom";
+import { Users, CalendarHeart } from "lucide-react";
 import { MdOutlineGroups } from "react-icons/md";
 import { FcCollaboration } from "react-icons/fc";
 import { FaRegHandshake } from "react-icons/fa6";
@@ -21,46 +20,64 @@ const aboutUsData = [
   {
     icon: <PiTargetDuotone  className="w-8 h-8" />,
     title: "Our Aim",
-    description: "Our mission is to empower the next generation of tech leaders by creating an inclusive environment that nurtures talent and drives innovation. We believe that through shared knowledge and collective effort, we can transform ideas into impactful solutions. Whether you’re just beginning your tech journey or are an experienced professional, Techxera is dedicated to helping you grow and succeed",
+    description:
+      "Our mission is to empower the next generation of tech leaders by creating an inclusive environment that nurtures talent and drives innovation. We believe that through shared knowledge and collective effort, we can transform ideas into impactful solutions. Whether you’re just beginning your tech journey or are an experienced professional, Techxera is dedicated to helping you grow and succeed.",
   },
   {
     icon: <FcCollaboration className="w-8 h-8" />,
     title: "Our Collaboration",
-    description: "We are proud to announce our collaboration with the 10x Club by Coding Ninjas. This partnership brings together brilliant minds and cutting-edge resources, offering enhanced opportunities for mentorship, skill development, and hands-on projects. Through this alliance, we aim to elevate the learning experience and expand the horizons for all our members.",
+    description:
+      "We are proud to announce our collaboration with the 10x Club by Coding Ninjas. This partnership brings together brilliant minds and cutting-edge resources, offering enhanced opportunities for mentorship, skill development, and hands-on projects. Through this alliance, we aim to elevate the learning experience and expand the horizons for all our members.",
   },
   {
     icon: <FaRegHandshake className="w-8 h-8" />,
     title: "Join Us",
-    description: "Techxera is open to everyone with a passion for technology. If you’re ready to dive into a world of innovation, creativity, and collaboration, we invite you to join our community. Together, we can push the boundaries of what’s possible and create a future defined by technological excellence",
+    description:
+      "Techxera is open to everyone with a passion for technology. If you’re ready to dive into a world of innovation, creativity, and collaboration, we invite you to join our community. Together, we can push the boundaries of what’s possible and create a future defined by technological excellence.",
   },
-
 ];
 
 const AboutUs = () => {
   return (
-    <section className="py-20 px-4 bg-black">
-      <div className="container mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-white">
-          What's at Techfest?
+    <section className="py-20 px-4 bg-black relative overflow-hidden">
+      <div className="container mx-auto relative z-10">
+        <h2 className="text-4xl md:text-5xl mt-6 font-extrabold text-center mb-16 text-white tracking-wide">
+          About <span className="text-green-400">TECH</span>
+          <span className="text-blue-500">XERA</span>
         </h2>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {aboutUsData.map((feature, index) => (
-            <Link
-              to="/about"
+            <div
               key={index}
-              className="glass-card p-8 rounded-lg text-center hover:transform hover:scale-105 transition-transform"
+              className="relative p-8 rounded-lg text-center transition-transform transform hover:scale-105 group"
             >
-              <div className="mb-6 text-primary inline-block">
-                {feature.icon}
+              {/* Neon Border Effect */}
+              <div
+                className="absolute inset-0 rounded-lg opacity-85 group-hover:opacity-85 transition-opacity duration-500 pointer-events-none"
+                style={{
+                  border: "2px solid transparent",
+                  background:
+                    "linear-gradient(145deg, black, black) padding-box, linear-gradient(145deg, #00ff7f, #0044cc) border-box",
+                  filter: "blur(6px)",
+                }}
+              ></div>
+
+              {/* iOS-Style Transparent Background on Hover */}
+              <div className="relative z-10 py-6 px-1 bg-black bg-opacity-40 rounded-lg shadow-lg backdrop-blur-md transition-all duration-500 group-hover:bg-opacity-10">
+                <div className="mb-6 inline-block text-primary">{feature.icon}</div>
+                <h3 className="text-xl font-semibold mb-4 text-white">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300">{feature.description}</p>
               </div>
-              <h3 className="text-xl font-semibold mb-4 text-white">
-                {feature.title}
-              </h3>
-              <p className="text-gray-300">{feature.description}</p>
-            </Link>
+            </div>
           ))}
         </div>
       </div>
+
+      {/* Background Animation */}
+      <div className="absolute inset-0 animate-pulse bg-gradient-to-br from-green-900 via-black to-blue-900 opacity-30"></div>
     </section>
   );
 };
