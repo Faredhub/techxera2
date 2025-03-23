@@ -85,7 +85,7 @@ const Sponsors: React.FC<SponsorsProps> = ({ darkMode }) => {
           >
             {Partners.map((sponsor, index) => (
               <div key={index} className="gap-2 items-center">
-                <div className="w-[150px] flex flex-col gap-3 items-center md:w-[230px]">
+                <div className="w-[170px] flex flex-col gap-3 items-center md:w-[230px]">
                   <img
                     src={sponsor.sponserImage}
                     className="w-full"
@@ -106,7 +106,7 @@ const Sponsors: React.FC<SponsorsProps> = ({ darkMode }) => {
         <h2 className="text-lg px-4 font-extralight bg-gradient-to-r from-green-400 via-green-500 to-green-600 bg-clip-text text-transparent">
           Sponsored by:
         </h2>
-        <motion.div ref={sliderRef} className="mt-1 w-full flex cursor-grab">
+        <motion.div ref={sliderRef} className="mt-1 w-full flex justify-center cursor-grab">
           <motion.div
             className="flex gap-12 justify-center"
           >
