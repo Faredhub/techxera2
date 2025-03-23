@@ -17,10 +17,6 @@ const Partners = [
       "https://www.trickyenough.com/wp-content/uploads/2022/07/cn-logo-dark-9824-1.png",
   },
   {
-    sponserTitle: "Training partner",
-    sponserImage: "https://i.ibb.co/sdwMfsYc/42ef8204-934c-4596-9366-197952db7b83-removalai-preview.png",
-  },
-  {
     sponserTitle: "Workshop Partner",
     sponserImage:
       "https://www.trickyenough.com/wp-content/uploads/2022/07/cn-logo-dark-9824-1.png",
@@ -97,6 +93,18 @@ const Sponsors: React.FC<SponsorsProps> = ({ darkMode }) => {
                 </div>
               </div>
             ))}
+            <div key={index} className="gap-2 items-center">
+                <div className="w-[220px] flex flex-col gap-3 items-center md:w-[230px]">
+                  <img
+                    src="https://i.ibb.co/sdwMfsYc/42ef8204-934c-4596-9366-197952db7b83-removalai-preview.png"
+                    className="w-full"
+                    alt="Training partner"
+                  />
+                  <h3 className="text-[17px] nunito md:text-[20px] text-indigo-600">
+                    Training partner
+                  </h3>
+                </div>
+              </div>
           </motion.div>
         </motion.div>
       </div>
