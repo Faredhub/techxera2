@@ -85,7 +85,7 @@ const Sponsors: React.FC<SponsorsProps> = ({ darkMode }) => {
           >
             {Partners.map((sponsor, index) => (
               <div key={index} className="gap-2 items-center">
-                <div className="w-[150px] flex flex-col gap-3 items-center md:w-[200px]">
+                <div className="w-[150px] flex flex-col gap-3 items-center md:w-[230px]">
                   <img
                     src={sponsor.sponserImage}
                     className="w-full"
@@ -108,9 +108,6 @@ const Sponsors: React.FC<SponsorsProps> = ({ darkMode }) => {
         </h2>
         <motion.div ref={sliderRef} className="mt-1 w-full flex cursor-grab">
           <motion.div
-            initial={{ x: "100%" }}
-            animate={{ x: ["50%", "-100%"] }}
-            transition={{ repeat: Infinity, ease: "linear", duration: 10 }}
             className="flex gap-12 justify-center"
           >
             {sponsors.map((sponsor, index) => (
