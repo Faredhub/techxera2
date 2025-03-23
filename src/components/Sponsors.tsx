@@ -11,10 +11,15 @@ const Partners = [
     sponserTitle: "Incubation Partner",
     sponserImage: "https://www.aicnalanda.com/public/img/aicnewlogo.png",
   },
+    
   {
     sponserTitle: "Workshop Partner",
     sponserImage:
       "https://www.trickyenough.com/wp-content/uploads/2022/07/cn-logo-dark-9824-1.png",
+  },
+  {
+    sponserTitle: "Incubation Partner",
+    sponserImage: "https://www.aicnalanda.com/public/img/aicnewlogo.png",
   },
   {
     sponserTitle: "Workshop Partner",
@@ -93,7 +98,7 @@ const Sponsors: React.FC<SponsorsProps> = ({ darkMode }) => {
                 </div>
               </div>
             ))}
-            <div key={index} className="gap-2 items-center">
+            <div className="gap-2 items-center">
                 <div className="w-[220px] flex flex-col gap-3 items-center md:w-[230px]">
                   <img
                     src="https://i.ibb.co/sdwMfsYc/42ef8204-934c-4596-9366-197952db7b83-removalai-preview.png"
