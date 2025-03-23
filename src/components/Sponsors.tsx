@@ -18,7 +18,7 @@ const Partners = [
   },
   {
     sponserTitle: "Training partner",
-    sponserImage: "https://codedais.com/index",
+    sponserImage: "https://i.ibb.co/sdwMfsYc/42ef8204-934c-4596-9366-197952db7b83-removalai-preview.png",
   },
   {
     sponserTitle: "Workshop Partner",
