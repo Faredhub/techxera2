@@ -17,8 +17,8 @@ const Partners = [
       "https://www.trickyenough.com/wp-content/uploads/2022/07/cn-logo-dark-9824-1.png",
   },
   {
-    sponserTitle: "Incubation Partner",
-    sponserImage: "https://www.aicnalanda.com/public/img/aicnewlogo.png",
+    sponserTitle: "Training partner",
+    sponserImage: "https://codedais.com/index",
   },
   {
     sponserTitle: "Workshop Partner",
