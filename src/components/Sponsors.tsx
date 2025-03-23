@@ -16,16 +16,7 @@ const Partners = [
     sponserTitle: "Workshop Partner",
     sponserImage:
       "https://www.trickyenough.com/wp-content/uploads/2022/07/cn-logo-dark-9824-1.png",
-  },
-  {
-    sponserTitle: "Incubation Partner",
-    sponserImage: "https://www.aicnalanda.com/public/img/aicnewlogo.png",
-  },
-  {
-    sponserTitle: "Workshop Partner",
-    sponserImage:
-      "https://www.trickyenough.com/wp-content/uploads/2022/07/cn-logo-dark-9824-1.png",
-  },
+  }
 ];
 
 const sponsors = [
